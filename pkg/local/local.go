@@ -26,7 +26,7 @@ func ListInterfaces() error {
 				ip = v.IP
 			}
 
-			fmt.Printf("\n%d\n", ip)
+			fmt.Printf("\n%v\n", ip)
 		}
 	}
 	return nil
