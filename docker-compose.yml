@@ -3,12 +3,14 @@ services:
   user:
     image: ubuntu
     container_name: scanner_user
-    command: sleep 100
+    command: touch login 1
+    command: sleep 1000
     links:
       - db
   db:
      image: mysql
      container_name: scanner_db
+     command: mysql sql/schema.sql
      restart: always
      environment:
         - MYSQL_ROOT_PASSWORD="secret"
