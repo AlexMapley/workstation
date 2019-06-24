@@ -4,10 +4,12 @@ services:
     image: ubuntu
     container_name: scanner_user
     command: touch login_1
-    command: bash bash/install_mysql.sh
+    command: bash scanner/bash/install_mysql.sh
     command: sleep 1000
     links:
       - db
+    volumes:
+    - .:/scanner
   db:
      image: mysql
      container_name: scanner_db
