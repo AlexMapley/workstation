@@ -3,7 +3,8 @@ services:
   user:
     image: ubuntu
     container_name: scanner_user
-    command: touch login 1
+    command: touch login_1
+    command: bash bash/install_mysql.sh
     command: sleep 1000
     links:
       - db
