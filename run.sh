@@ -1,1 +1,1 @@
-go run cmd/scannerd/main.go
+docker-compose up -d
