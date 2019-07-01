@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+CMD ["mkdir /src"]
+
 Add . /src
 
 WORKDIR /src
