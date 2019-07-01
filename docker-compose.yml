@@ -3,7 +3,7 @@ services:
   user:
     image: ubuntu
     container_name: scanner_user
-    command: sleep 100
+    command: sleep infinity
     links:
       - db
   db:
