@@ -5,3 +5,6 @@ Workstation is a dockerized ubuntu environment, meant for ease of development. G
 
 ## Technologies Supported
 - Mysql
+- Bash
+- Perl
+- Lisp
