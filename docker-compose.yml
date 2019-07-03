@@ -3,7 +3,9 @@ services:
   user:
     image: ubuntu
     container_name: user_daemon
-    command: sleep infinity
+    volumes:
+    - ./:/src
+    command: bash /src/bash/installs.sh && sleep infinity
     links:
       - db
   db:
