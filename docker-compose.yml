@@ -8,9 +8,12 @@ services:
     command: bash /src/bash/installs.sh && sleep infinity
     links:
       - db
+    volumes:
+    - .:/scanner
   db:
      image: mysql
      container_name: scanner_db
+     command: mysql sql/schema.sql
      restart: always
      environment:
         - MYSQL_ROOT_PASSWORD="secret"
