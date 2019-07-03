@@ -2,10 +2,10 @@ version: '3'
 services:
   user:
     image: ubuntu
-    container_name: scanner_user
-    command: touch login_1
-    command: bash scanner/bash/install_mysql.sh
-    command: sleep 1000
+    container_name: user_daemon
+    volumes:
+    - ./:/src
+    command: bash /src/bash/installs.sh && sleep infinity
     links:
       - db
     volumes:

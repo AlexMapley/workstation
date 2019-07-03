@@ -1,3 +1,9 @@
 FROM ubuntu:latest
-RUN apt-get update
-VOLUME ["."]
+
+CMD ["mkdir /src"]
+
+Add . /src
+
+WORKDIR /src
+
+CMD ["date > last_build"]
