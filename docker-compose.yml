@@ -1,15 +1,13 @@
 version: '3'
 services:
-  user:
+  workstation:
     image: ubuntu
     container_name: user_daemon
     volumes:
     - ./:/src
-    command: bash /src/bash/installs.sh && sleep infinity
-    links:
-      - db
-    volumes:
-    - .:/scanner
+    command: sleep infinity
+    # links:
+    #   - db
   db:
      image: mysql
      container_name: scanner_db
