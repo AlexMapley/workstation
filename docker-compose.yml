@@ -6,8 +6,6 @@ services:
     volumes:
     - ./:/src
     command: sleep infinity
-    # links:
-    #   - db
   db:
      image: mysql
      container_name: scanner_db
