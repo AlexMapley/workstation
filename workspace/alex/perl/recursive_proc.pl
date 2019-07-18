@@ -1,23 +1,7 @@
-#!/usr/bin/perl
-use warnings;
-use Config;
-
-print "\n1. ", $^O, "\n";
-print "2. ", "$Config{osname}\n";
-print "3. ", "$Config{archname}\n\n";
-
-
-if ($^O eq "linux") {
-    print "///////////////////////////////////////////\n\n\n"
-}
-
-use POSIX qw(:sys_wait_h);
-
-my $timeOut = 5;
-
 $SIG{ALRM} = \&timeout;
 $SIG{CHLD} = 'IGNORE',
 alarm($timeOut);
+
 
 my $childPid = fork();
 if ($childPid) {
