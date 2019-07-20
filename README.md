@@ -8,3 +8,4 @@ Workstation is a dockerized ubuntu environment, meant for ease of development. G
 - Bash
 - Perl
 - Lisp
+- Python 3.5
