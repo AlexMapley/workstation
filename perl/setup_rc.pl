@@ -5,3 +5,4 @@ open(my $fd, ">>/root/.bashrc") or die "Couldn't open: $!";
 
 print $fd("alias c=\"clear\"\n");
 print $fd("alias alex=\"cd /src/workspace/alex\n\"");
+print $fd("alias python=\"python3.5\"\n");
