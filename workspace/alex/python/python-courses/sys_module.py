@@ -16,6 +16,6 @@ for i in range(len(sys.argv)):
         print("%d. argument: %s" % (i,sys.argv[i]))
 
 
-## Enumerta data streams
+## Enumerate data streams
 for i in (sys.stdin, sys.stdout, sys.stderr):
     print(i)
