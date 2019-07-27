@@ -3,7 +3,7 @@ apt-get update -qq
 apt-get install wget -qq
 
 # Plugins
- apt-get install vim.
+apt-get install vim -qq
 
 # Mysql Server
 apt-get install install mysql-server -qq
