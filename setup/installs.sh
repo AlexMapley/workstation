@@ -8,10 +8,11 @@ apt-get install vim -qq
 # Mysql Server
 apt-get install install mysql-server -qq
 
-
 # Perl
 apt-get install rlwrap -qq
 
+# OCaml
+apt install ocaml -qq
 
 # Python 3.5.6
 apt-get install build-essential checkinstall -qq

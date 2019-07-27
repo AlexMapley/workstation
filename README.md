@@ -24,6 +24,7 @@ This should take a few minutes, and will require some interactivity specifically
 - Mysql
 - Bash
 - Perl
+- OCaml
 - Python 3.5
 
 
