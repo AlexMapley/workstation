@@ -1,13 +1,12 @@
-# Genderal
+# General
 apt-get update -qq
 apt-get install wget -qq
 
-# Lisp
-# apt-get install sbcl -qq
-# apt-get install clisp -qq
+# Plugins
+ apt-get install vim.
 
-# # Mysql Server
-# apt-get install install mysql-server -qq
+# Mysql Server
+apt-get install install mysql-server -qq
 
 
 # Perl

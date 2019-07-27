@@ -7,5 +7,8 @@ Workstation is a dockerized ubuntu environment, meant for ease of development. G
 - Mysql
 - Bash
 - Perl
-- Lisp
 - Python 3.5
+
+
+## Plugins
+- Vim
