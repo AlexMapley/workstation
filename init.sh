@@ -1,3 +1,1 @@
-bash setup/installs.sh
-perl setup/write_bashrc.pl
-source /root/.bashrc
+perl setup/write_bashrc.pl && bash setup/installs.sh; source /root/.bashrc
