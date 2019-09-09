@@ -11,6 +11,9 @@ apt-get install install mysql-server -qq
 # Perl
 apt-get install rlwrap -qq
 
+# C
+apt-get install build-essential
+
 # # OCaml
 # apt install ocaml -qq
 
