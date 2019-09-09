@@ -6,11 +6,3 @@ services:
     volumes:
     - ./:/src
     command: sleep infinity
-  db:
-     image: mysql
-     container_name: scanner_db
-     command: mysql sql/schema.sql
-     restart: always
-     environment:
-        - MYSQL_ROOT_PASSWORD="secret"
-  
