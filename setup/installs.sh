@@ -12,7 +12,7 @@ apt-get install install mysql-server -qq
 apt-get install rlwrap -qq
 
 # C
-apt-get install build-essential
+apt-get install build-essential -qq
 
 # # OCaml
 # apt install ocaml -qq
