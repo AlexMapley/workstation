@@ -2,6 +2,7 @@
 apt-get update -qq
 apt-get install wget -qq
 apt-get install man -qq
+apt-get install git
 
 # Text Editing
 apt-get install vim -qq

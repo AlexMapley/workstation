@@ -5,9 +5,11 @@
 int login (void);
 
 int main (void) {
+
 	if (login() ==1) {
 		system ("/bin/sh");
 	}
+
 	return 0;
 }
 
@@ -16,6 +18,7 @@ int login (void) {
 	char userInput[51];
 
 	puts ("Please enter the password:");
+
 	scanf ("%s", userInput);
 
 	if (strcmp("foobar", userInput) == 0) {
