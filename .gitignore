@@ -1,1 +1,3 @@
+# ignore compiled binaries
 *.out
+*.pyc
