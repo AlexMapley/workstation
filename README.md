@@ -10,7 +10,7 @@ Assuming you have both `docker` and `docker-compose` up and running on your loca
 bash run.sh
 ```
 
-to fire off a new build and create a new bash session.
+to fire off a new build and tunnel into an new bash session.
 
 To install all dependencies enumerated in the `README`, as well as updating the `.bashrc`, run:
 
@@ -18,7 +18,7 @@ To install all dependencies enumerated in the `README`, as well as updating the 
 bash init.sh
 ```
 
-This should take a few minutes, and will require some interactivity specifically for setting up python.
+This should take a few minutes, and may require some interactivity (specifically for setting up python). Currently the best way to pick/choose language dependencies is to manually comment in/out that `init.sh` file, working on that in the future. 
 
 ## Technologies Supported
 - Mysql
