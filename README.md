@@ -26,6 +26,7 @@ This should take a few minutes, and will require some interactivity specifically
 - Perl
 - OCaml
 - Python 3.5
+- C
 
 
 ## Plugins
