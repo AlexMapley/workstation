@@ -13,6 +13,8 @@ apt-get install rlwrap -qq
 
 # C
 apt-get install build-essential -qq
+apt-get install gdb -qq
+
 
 # # OCaml
 # apt install ocaml -qq
