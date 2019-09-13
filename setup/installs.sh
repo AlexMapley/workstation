@@ -3,11 +3,8 @@ apt-get update -qq
 apt-get install wget -qq
 apt-get install man -qq
 
-# Plugins
+# Text Editing
 apt-get install vim -qq
-
-# Mysql Server
-apt-get install install mysql-server -qq
 
 # Perl
 apt-get install rlwrap -qq
@@ -29,3 +26,6 @@ apt-get install gdb -qq
 # tar xzf Python-3.5.6.tgz
 # cd Python-3.5.6
 # ./configure --enable-optimizations
+
+# # Mysql Server
+# apt-get install install mysql-server -qq
