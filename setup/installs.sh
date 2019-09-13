@@ -1,6 +1,7 @@
 # General
 apt-get update -qq
 apt-get install wget -qq
+apt-get install man -qq
 
 # Plugins
 apt-get install vim -qq
