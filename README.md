@@ -34,3 +34,6 @@ This should take a few minutes, and may require some interactivity (specifically
 This is more so a personal playground rather than an open software project. I would recommend forking this repository for personal use and wiping out everything under the `workspace/` heirarchy.
 
 Git commit messages are non-standard and otherwise difficult to follow, as much of the work done here is only meant for version controlling personal progress as opposed to providing readability.
+
+## Acknowledgements
+- Thanks to https://github.com/wernight/docker-funbox, especially for your ascii art collection!
