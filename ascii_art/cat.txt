@@ -1,17 +1,5 @@
 
- 
-                        b        i                                             
-                        b                                                      
-                        b                                                      
- mmmmmmm   eee  ww    w bbbb   iii     eee   sssss    cccc   ooo   mmmmmmm 
- mmmmmmm  ee ee ww   ww bb bb    i    ee ee  ss ss   cc  c  oo oo  mmmmmmm 
- m  m  m  e   e ww w ww b   b    i    e   e  sss     cc     o   o  m  m  m 
- m  m  m  eeeee  wwwww  b   b    i    eeeee  sssss   c      o   o  m  m  m 
- m  m  m  e      wwwww  b   b    i    e         ss   cc     o   o  m  m  m 
- m  m  m  ee  e  wwwww  bb bb    i    ee  e  ss ss   cc  c  oo oo  m  m  m 
- m  m  m   eeee   w w   bbbb   iiiii   eeee  sssss .  cccc   ooo   m  m  m  
 
-							 
                                 .                               QZW+ISQ
                                +QS.                            ==  =  ==
                               -Z==v                           Q+=  ;  ==
@@ -69,3 +57,4 @@
                            Q==X
                             X;i
                             Oo`
+
