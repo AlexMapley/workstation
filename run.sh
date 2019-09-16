@@ -4,10 +4,7 @@
 # it will begin a new bash user session via 
 # the user_daemon container.
 docker-compose up -d
-
 containerID=$(docker ps | grep ubuntu | awk '{print $1}')
 
-docker exec -it $containerID bash -c "color=$(shuf -i 1-7 -n 1); tput setaf $color; cd /src/ascii_art/scripts/; bash display_random.sh; cd /src/; tput sgr0; echo"
-
-# docker exec -it $containerID bash -c "color=2 && echo foo $color `color`; tput setaf $color; cd /src/ascii_art/scripts/; bash display_random.sh; cd /src/; tput sgr0; echo"
+docker exec -it $containerID bash -c "tput setaf $(( RANDOM % 7 + 1)); cd /src/ascii_art/scripts/; bash display_random.sh; cd /src/; tput sgr0; echo"
 docker exec -it $containerID /bin/bash
