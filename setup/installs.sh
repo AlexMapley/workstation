@@ -2,7 +2,7 @@
 apt-get update -qq
 apt-get install wget -qq
 apt-get install man -qq
-apt-get install git
+apt-get install git -qq
 apt-get install build-essential checkinstall -qq
 
 # Text Editing
