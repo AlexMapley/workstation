@@ -3,5 +3,6 @@
 using namespace std;
 
 int main() {
-	std::cout << "Hello World!";
+	cout << "Hello World!\n";
+	cout << "First c++ program in linux\n";
 }
