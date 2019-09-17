@@ -8,8 +8,13 @@ int addition (int a, int b) {
 	return r;
 }
 
+void printmessage() {
+	cout << "I'm a function!\n";
+}
+
 int main() {
 	int z;
 	z = addition (5,3);
 	cout << "The result is " << z << '\n';
+	printmessage();
 }
