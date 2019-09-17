@@ -3,6 +3,7 @@ apt-get update -qq
 apt-get install wget -qq
 apt-get install man -qq
 apt-get install git
+apt-get install build-essential checkinstall -qq
 
 # Text Editing
 apt-get install vim -qq
@@ -10,7 +11,7 @@ apt-get install vim -qq
 # Perl
 apt-get install rlwrap -qq
 
-# C
+# C / C++
 apt-get install build-essential -qq
 apt-get install gdb -qq
 
@@ -19,7 +20,6 @@ apt-get install gdb -qq
 # apt install ocaml -qq
 
 # # Python 3.5.6
-# apt-get install build-essential checkinstall -qq
 # ## Will require timezone entry, 2-105 for America-NewYork
 # apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev -qq
 # cd /usr/src
