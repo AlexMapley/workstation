@@ -53,7 +53,10 @@ int isValidFile(char filename[]) {
         return -1;
     }
     // Or our binaries
-        if (strcmp(filename, "a.out") == 0) {
+    if (strcmp(filename, "a.out") == 0) {
+        return -1;
+    }
+    if (strcmp(filename, ".git") == 0) {
         return -1;
     }
 
