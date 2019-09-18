@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <limits.h>
@@ -13,18 +14,39 @@ void xorString (char *s) {
 }
 
 void cryptFile(char *filename) {
-    FILE *fp;
-    fp = fopen(filename, "r"); // read mode
 
-    char ch;
-    if (fp == NULL)
-    {
-        perror("Error while opening the file.\n");
-    }
-    while((ch = fgetc(fp)) != EOF)
-        printf("%c", ch);
- 
-    fclose(fp);
+    FILE *f = fopen(filename, "r+");
+    fseek(f, 0, SEEK_END);
+    long fsize = ftell(f);
+    fseek(f, 0, SEEK_SET);  /* same as rewind(f); */
+
+    char *contents = malloc(fsize + 1);
+    fread(contents, 1, fsize, f);
+    fclose(f);
+
+    contents[fsize] = 0;
+    printf("\n%s\n", contents);
+
+    xorString(contents);
+    printf("\n%s\n", contents);
+
+    xorString(contents);
+    printf("\n%s\n", contents);
+
+    // FILE *fp;
+    // fp = fopen(filename, "a+"); // read mode
+
+    // char ch;
+    // if (fp == NULL)
+    // {
+    //     perror("Error while opening the file.\n");
+    // }
+    // while((ch = fgetc(fp)) != EOF)
+    //     printf("%c", ch);
+    
+    // printf("\n\n");
+
+    // fclose(fp);
 }
 
 
