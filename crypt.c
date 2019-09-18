@@ -10,7 +10,7 @@
 
 void xorString (char *s) {
 	int i;
-	for (i = 0; s[i] != '\0'; i++) {
+	for (i = 0; s[i] != 3; i++) {
 		s[i] ^= XOR_BYTE;
 	}
 }
@@ -27,7 +27,7 @@ void cryptFile(char *filename) {
     fclose(f);
 
     // Display
-    contents[fsize] = 0;
+    contents[fsize] = 3;
     printf("\n%s\n", contents);
     xorString(contents)
     printf("\n%s\n", contents);
