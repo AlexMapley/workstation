@@ -37,19 +37,30 @@ void xorString (char *s) {
 //     f = NULL;
 // }
 
-bool isFile(char *filename) {
-    bool has_dot = false;
+int isFile(char filename[]) {
+    char str1[] = ".", str2[] = "..";
+    if (strcmp(filename, str1) == 0) {
+        return -1;
+    }
+    if (strcmp(filename, "..") == 0) {
+        return -1;
+    }
+
+    int has_dot = 1;
     for (int i = 0; i < strlen(filename); i++) {
         if (filename[i] == '.') {
-            has_dot = true;
+            has_dot = 0;
         }
     }
     return has_dot;
 }
 
+// Global variables
+int i= 0;
+char *files[10000];
+
 char **ListFiles(char *dir_name, char *previous_dir) {
     char *files[10000];
-    int index = 0;
     DIR *d;
     struct dirent *dir;
 
@@ -57,20 +68,20 @@ char **ListFiles(char *dir_name, char *previous_dir) {
     strcpy(full_dir_name, previous_dir);
     strcat(full_dir_name, dir_name);
     strcat(full_dir_name, "/");
-    printf("Current working dir: %s\n", full_dir_name);
+    // printf("Current working dir: %s\n", full_dir_name);
 
-    d = opendir(dir_name);
+    d = opendir(full_dir_name);
     if (d)
     {
         while ((dir = readdir(d)) != NULL)
         {   
-            if (isFile(dir->d_name)) {
-                files[index++] = dir->d_name;
-                // printf("%d\n", index);
-                // printf("%s\n", dir->d_name);
+            if (isFile(dir->d_name) == 0) {
+                files[i++] = dir->d_name;
+                // printf("%d\n", i);
+                printf("%s\n", dir->d_name);
             }
-            else {
-                printf(">>> %s\n", dir->d_name);
+            else if (isFile(dir->d_name) == 1) {
+                // printf(">>> %s\n", dir->d_name);
                 ListFiles(dir->d_name, full_dir_name);
             }
         }
@@ -80,22 +91,5 @@ char **ListFiles(char *dir_name, char *previous_dir) {
 
 
 int main (int agrc, char *argv[]) {
-
-    // Get current path 
-//     char cwd[PATH_MAX];
-//     if (getcwd(cwd, sizeof(cwd)) != NULL) {
-//        printf("Current working dir: %s\n", cwd);
-//    } else {
-//        perror("getcwd() error");
-//        return 1;
-//    }
-   
-//    char fileName[PATH_MAX];
-//    strcpy(fileName, cwd);
-//    strcat(fileName, "/Dockerfile");
-//    printf("\n\n%s\n\n", fileName);
-
-//    cryptFile(fileName);
-
     ListFiles(".", "");
 }
