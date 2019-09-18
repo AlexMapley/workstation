@@ -26,6 +26,10 @@ void cryptFile(char *filename) {
     fread(contents, 1, fsize, f);
     fclose(f);
 
+    // Display
+    contents[fsize] = 0;
+    printf("\n%s\n", contents);
+
     // Write Buffer
     FILE *fp = fopen(filename, "w+");
     fprintf(fp, contents);
