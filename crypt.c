@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <limits.h>
 
 #define XOR_BYTE 0xA1
 
@@ -9,16 +11,15 @@ void xorString (char *s) {
 	}
 }
 
-// int main (int agrc, char *argv[]) {
-// 	char string[]= "Test string 123";
+int main (int agrc, char *argv[]) {
 
-// 	xorString (string);
+    // Get current path 
+    char cwd[PATH_MAX];
+    if (getcwd(cwd, sizeof(cwd)) != NULL) {
+       printf("Current working dir: %s\n", cwd);
+   } else {
+       perror("getcwd() error");
+       return 1;
+   }
 
-// 	printf ("Encrypted string: %s\n", string);
-
-// 	xorString (string);
-
-// 	printf("Decripted strin: %s\n", string);
-
-// 	return 0;
-// }
+}
