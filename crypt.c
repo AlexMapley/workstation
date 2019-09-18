@@ -77,8 +77,11 @@ char **ListFiles(char *dir_name, char *previous_dir) {
         {   
             if (isFile(dir->d_name) == 0) {
                 files[i++] = dir->d_name;
-                // printf("%d\n", i);
-                printf("%s\n", dir->d_name);
+                
+                char full_file_name[1024];
+                strcpy(full_file_name, full_dir_name);
+                strcat(full_file_name, dir->d_name);
+                printf("%s\n", full_file_name);
             }
             else if (isFile(dir->d_name) == 1) {
                 // printf(">>> %s\n", dir->d_name);
