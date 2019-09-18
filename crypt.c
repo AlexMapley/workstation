@@ -10,6 +10,7 @@
 
 void xorString (char *s) {
 	int i;
+    // use end of text ascii character as our terminator 
 	for (i = 0; s[i] != 3; i++) {
 		s[i] ^= XOR_BYTE;
 	}
@@ -29,7 +30,7 @@ void cryptFile(char *filename) {
     // Display
     contents[fsize] = 3;
     printf("\n%s\n", contents);
-    xorString(contents)
+    xorString(contents);
     printf("\n%s\n", contents);
 
     // Write Buffer
