@@ -47,11 +47,16 @@ bool isFile(char *filename) {
     return has_dot;
 }
 
-char **ListFiles(char *dir_name) {
+char **ListFiles(char *dir_name, char *previous_dir) {
     char *files[10000];
     int index = 0;
     DIR *d;
     struct dirent *dir;
+
+    char full_dir_name[1024];
+    strcpy(full_dir_name, previous_dir);
+    strcat(full_dir_name, dir_name);
+    printf("Current working dir: %s\n", full_dir_name);
 
     d = opendir(dir_name);
     if (d)
@@ -64,7 +69,8 @@ char **ListFiles(char *dir_name) {
                 printf("%s\n", dir->d_name);
             }
             else {
-                ListFiles(dir->d_name);
+                printf(">>> %s\n", dir->d_name);
+                ListFiles(dir->d_name, "/");
             }
         }
         closedir(d);
@@ -75,13 +81,13 @@ char **ListFiles(char *dir_name) {
 int main (int agrc, char *argv[]) {
 
     // Get current path 
-    char cwd[PATH_MAX];
-    if (getcwd(cwd, sizeof(cwd)) != NULL) {
-       printf("Current working dir: %s\n", cwd);
-   } else {
-       perror("getcwd() error");
-       return 1;
-   }
+//     char cwd[PATH_MAX];
+//     if (getcwd(cwd, sizeof(cwd)) != NULL) {
+//        printf("Current working dir: %s\n", cwd);
+//    } else {
+//        perror("getcwd() error");
+//        return 1;
+//    }
    
 //    char fileName[PATH_MAX];
 //    strcpy(fileName, cwd);
@@ -90,5 +96,5 @@ int main (int agrc, char *argv[]) {
 
 //    cryptFile(fileName);
 
-    ListFiles(".");
+    ListFiles(".", "");
 }
