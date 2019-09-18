@@ -56,21 +56,22 @@ char **ListFiles(char *dir_name, char *previous_dir) {
     char full_dir_name[1024];
     strcpy(full_dir_name, previous_dir);
     strcat(full_dir_name, dir_name);
+    strcat(full_dir_name, "/");
     printf("Current working dir: %s\n", full_dir_name);
 
     d = opendir(dir_name);
     if (d)
     {
         while ((dir = readdir(d)) != NULL)
-        {
+        {   
             if (isFile(dir->d_name)) {
                 files[index++] = dir->d_name;
                 // printf("%d\n", index);
-                printf("%s\n", dir->d_name);
+                // printf("%s\n", dir->d_name);
             }
             else {
                 printf(">>> %s\n", dir->d_name);
-                ListFiles(dir->d_name, "/");
+                ListFiles(dir->d_name, full_dir_name);
             }
         }
         closedir(d);
