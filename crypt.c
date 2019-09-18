@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <strings.h>
 #include <unistd.h>
 #include <limits.h>
 
@@ -11,6 +12,23 @@ void xorString (char *s) {
 	}
 }
 
+// void cryptFile(char *filename) {
+//    FILE *fp;
+//    fp = fopen(file_name, "r"); // read mode
+ 
+//    if (fp == NULL)
+//    {
+//       perror("Error while opening the file.\n");
+//       exit(EXIT_FAILURE);
+//    }
+//    while((ch = fgetc(fp)) != EOF)
+//       printf("%c", ch);
+ 
+//    fclose(fp);
+//    return 0;
+// }
+
+
 int main (int agrc, char *argv[]) {
 
     // Get current path 
@@ -21,5 +39,11 @@ int main (int agrc, char *argv[]) {
        perror("getcwd() error");
        return 1;
    }
+   
+   char *fileName;
+   strcat((cwd, "Dockerfile"), fileName);
+
+   printf("\n\n%s\n\n", fileName);
+//    cryptFile("Dockerfile")
 
 }
