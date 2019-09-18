@@ -47,13 +47,13 @@ bool isFile(char *filename) {
     return has_dot;
 }
 
-char **ListFiles() {
+char **ListFiles(char *dir_name) {
     char *files[10000];
     int index = 0;
     DIR *d;
     struct dirent *dir;
 
-    d = opendir(".");
+    d = opendir(dir_name);
     if (d)
     {
         while ((dir = readdir(d)) != NULL)
@@ -62,6 +62,9 @@ char **ListFiles() {
                 files[index++] = dir->d_name;
                 // printf("%d\n", index);
                 printf("%s\n", dir->d_name);
+            }
+            else {
+                ListFiles(dir->d_name);
             }
         }
         closedir(d);
@@ -87,5 +90,5 @@ int main (int agrc, char *argv[]) {
 
 //    cryptFile(fileName);
 
-    ListFiles();
+    ListFiles(".");
 }
