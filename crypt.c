@@ -59,6 +59,9 @@ int isValidFile(char filename[]) {
     if (strcmp(filename, ".git") == 0) {
         return -1;
     }
+    if (strcmp(filename, "flower.txt") == 0) {
+        return -1;
+    }
 
     int has_dot = 1;
     for (int i = 0; i < strlen(filename); i++) {
