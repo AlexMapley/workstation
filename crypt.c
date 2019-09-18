@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <limits.h>
 #include <dirent.h>
+#include <stdbool.h>
 
 #define XOR_BYTE 0xA1
 
@@ -36,7 +37,17 @@ void xorString (char *s) {
 //     f = NULL;
 // }
 
-char ** ListFiles() {
+bool isFile(char *filename) {
+    bool has_dot = false;
+    for (int i = 0; i < strlen(filename); i++) {
+        if (filename[i] == '.') {
+            has_dot = true;
+        }
+    }
+    return has_dot;
+}
+
+char **ListFiles() {
     char *files[10000];
     int index = 0;
     DIR *d;
@@ -47,9 +58,11 @@ char ** ListFiles() {
     {
         while ((dir = readdir(d)) != NULL)
         {
-            files[index++] = dir->d_name;
-            printf("%d\n", index);
-            printf("%s\n", dir->d_name);
+            if (isFile(dir->d_name)) {
+                files[index++] = dir->d_name;
+                // printf("%d\n", index);
+                printf("%s\n", dir->d_name);
+            }
         }
         closedir(d);
     }
