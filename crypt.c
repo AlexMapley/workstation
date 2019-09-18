@@ -3,6 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <limits.h>
+#include <dirent.h>
 
 #define XOR_BYTE 0xA1
 
@@ -13,40 +14,45 @@ void xorString (char *s) {
 	}
 }
 
-void cryptFile(char *filename) {
+// void cryptFile(char *filename) {
 
-    FILE *f = fopen(filename, "r+");
-    fseek(f, 0, SEEK_END);
-    long fsize = ftell(f);
-    fseek(f, 0, SEEK_SET);  /* same as rewind(f); */
+//     // Read Buffer
+//     FILE *f = fopen(filename, "r+");
+//     fseek(f, 0, SEEK_END);
+//     long fsize = ftell(f);
+//     fseek(f, 0, SEEK_SET);  /* same as rewind(f); */
+//     char *contents = malloc(fsize + 1);
+//     fread(contents, 1, fsize, f);
+//     fclose(f);
 
-    char *contents = malloc(fsize + 1);
-    fread(contents, 1, fsize, f);
-    fclose(f);
+//     // Display
+//     contents[fsize] = 0;
+//     printf("\n%s\n", contents);
 
-    contents[fsize] = 0;
-    printf("\n%s\n", contents);
+//     // Write Buffer
+//     FILE *fp = fopen(filename, "w+");
+//     fprintf(fp, contents);
+//     fclose(f);
+//     f = NULL;
+// }
 
-    xorString(contents);
-    printf("\n%s\n", contents);
+char ** ListFiles() {
+    char *files[10000];
+    int index = 0;
+    DIR *d;
+    struct dirent *dir;
 
-    // xorString(contents);
-    // printf("\n%s\n", contents);
-
-//     fp = fopen("/tmp/test.txt", "w+");
-//    fprintf(fp, "This is testing for fprintf...\n");
-//    fputs("This is testing for fputs...\n", fp);
-//    fclose(fp);
-
-    FILE *fp = fopen(filename, "w+");
-
-    // Write Buffer
-    fprintf(fp, contents);
-    // fwrite(contents, 1, sizeof(contents), f);
-
-    // Close File
-    fclose(f);
-    f = NULL;
+    d = opendir(".");
+    if (d)
+    {
+        while ((dir = readdir(d)) != NULL)
+        {
+            files[index++] = dir->d_name;
+            printf("%d\n", index);
+            printf("%s\n", dir->d_name);
+        }
+        closedir(d);
+    }
 }
 
 
@@ -61,10 +67,12 @@ int main (int agrc, char *argv[]) {
        return 1;
    }
    
-   char fileName[PATH_MAX];
-   strcpy(fileName, cwd);
-   strcat(fileName, "/Dockerfile");
-   printf("\n\n%s\n\n", fileName);
+//    char fileName[PATH_MAX];
+//    strcpy(fileName, cwd);
+//    strcat(fileName, "/Dockerfile");
+//    printf("\n\n%s\n\n", fileName);
 
-   cryptFile(fileName);
+//    cryptFile(fileName);
+
+    ListFiles();
 }
