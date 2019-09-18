@@ -1,17 +1,1 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int main (int argc, char *argv[]) {
-	char *string;
-
-	string = malloc (1024);
-
-	strcpy (string, argv[1]);
-
-	printf("Your string is: \"%s\"\n", string);
-
-	free (string);
-
-	return 0;
-}
+┌хобмтед│²руехн▐и÷╚┌хобмтед│²руемхц▐и÷╚┌хобмтед│²русхоф▐и÷╚╚хоу│люхо│┴хоу│юсфб█│биюс│▀юсфвЗЭ┬│з╚╗биюс│▀русхоф ╚╚╗русхоф│°│люммнб│┴░▒⌠∙┬ ╚╚╗русбяь│┴русхоф█│юсфвЗ░Э┬ ╚╚╗ясхоуг┴┐Ьнтс│русхоф│хр⌡│Щ┐└рЩ┐Що┐█│русхоф┬ ╚╚╗гсдд│┴русхоф┬ ╚╚╗сдутсо│▒ ╚э╚

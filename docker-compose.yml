@@ -1,8 +1,1 @@
-version: '3'
-services:
-  workstation:
-    image: ubuntu
-    container_name: user_daemon
-    volumes:
-    - ./:/src
-    command: sleep infinity
+вдсрхно⌡│├▓├╚рдсвхбдр⌡╚││жнсйруюухно⌡╚││││хлюфд⌡│тцтоут╚││││бноуюходсЧоюлд⌡│трдсЧеюдлно╚││││внмтлдр⌡╚││││▄│▐▌⌡▌рсб╚││││бнллюое⌡│рмддя│хогхохуь

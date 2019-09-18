@@ -1,18 +1,1 @@
-#include <iostream>
-using namespace std;
-
-long factorial (long a);
-
-int main () {
-	long number;
-	cin >> number;
-	cout << number << "! = " << factorial (number) << "\n";
-	return 0;
-}
-
-long factorial (long a) {
-	if (a == 0) {
-		return 1;
-	}
-	return a * factorial (a-1);
-}
+‚ÈÏÂÍÔÅÄÈÎÒÕÓÄÀÌŸ«ÔÒÈÏÆÏÀÌÄÒÑÀÂÄÒÕÅš««ÍÎÏÆÇÀÂÕÎÓÈÀÍ‰ÍÎÏÆÀˆš««ÈÏÕÌÀÈÏ‰ˆÚ«¨ÍÎÏÆÏÔÌÃÄÓš«¨ÂÈÏŸŸÏÔÌÃÄÓš«¨ÂÎÔÕÏÔÌÃÄÓƒ€œƒÇÀÂÕÎÓÈÀÍ‰ÏÔÌÃÄÓˆƒıÏƒš«¨ÓÄÕÔÓÏ‘š«Ü««ÍÎÏÆÇÀÂÕÎÓÈÀÍ‰ÍÎÏÆÀˆÚ«¨ÈÇ‰Àœœ‘ˆÚ«¨¨ÓÄÕÔÓÏš«¨Ü«¨ÓÄÕÔÓÏÀ‹ÇÀÂÕÎÓÈÀÍ‰ÀŒˆš«Ü«

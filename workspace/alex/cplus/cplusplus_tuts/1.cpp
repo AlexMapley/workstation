@@ -1,8 +1,1 @@
-#include <iostream>
-
-using namespace std;
-
-int main() {
-	cout << "Hello World!\n";
-	cout << "First c++ program in linux\n";
-}
+‚ÈÏÂÍÔÅÄÈÎÒÕÓÄÀÌŸ««ÔÒÈÏÆÏÀÌÄÒÑÀÂÄÒÕÅš««ÈÏÕÌÀÈÏ‰ˆÚ«¨ÂÎÔÕƒéÄÍÍÎöÎÓÍÅ€ýÏƒš«¨ÂÎÔÕƒçÈÓÒÕÂŠŠÑÓÎÆÓÀÌÈÏÍÈÏÔÙýÏƒš«Ü«
