@@ -30,17 +30,23 @@ void cryptFile(char *filename) {
     xorString(contents);
     printf("\n%s\n", contents);
 
-    xorString(contents);
-    printf("\n%s\n", contents);
+    // xorString(contents);
+    // printf("\n%s\n", contents);
 
-    FILE *f_dst = fopen(filename, "wb");
+//     fp = fopen("/tmp/test.txt", "w+");
+//    fprintf(fp, "This is testing for fprintf...\n");
+//    fputs("This is testing for fputs...\n", fp);
+//    fclose(fp);
+
+    FILE *fp = fopen(filename, "w+");
 
     // Write Buffer
-    fwrite(contents, 1, sizeof(contents), f_dst);
+    fprintf(fp, contents);
+    // fwrite(contents, 1, sizeof(contents), f);
 
     // Close File
-    fclose(f_dst);
-    f_dst = NULL;
+    fclose(f);
+    f = NULL;
 }
 
 
