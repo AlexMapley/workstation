@@ -1,7 +1,1 @@
-/*
-Logs are bucketed by priority level,
-0 holding most significant outputs
-*/
-CREATE TABLE IF NOT EXISTS logs0 (
-    message VARCHAR(1024)
-);
+▌▀╚Мнфр│юсд│цтбйдуде│ць│ясхнсхуь│мдвдм█╚▒│инмехоф│лнру│рхфохгхбюоу│нтуятур╚▀▌╚БСДЮУД│УЮЦМД│ХГ│ОНУ│ДЫХРУР│мнфр▒│┴╚││││лдррюфд│ВЮСБИЮС┴░▒⌠∙┬╚┬ 

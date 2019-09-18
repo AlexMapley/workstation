@@ -1,15 +1,1 @@
-
-#!/usr/bin/perl
-use warnings;
-use strict;
-
-print "Learning the comparator" . " and concatenating" . "\n";
-
-print "a message " x 4, "\n";
-
-use warnings;
-use strict;
- 
-my $s;
-chomp($s = <STDIN>);
-print $s, "\n";
+╚┌─▌трс▌цхо▌ядсм╚трд│жюсохофр ╚трд│русхбу ╚╚ясхоу│┐Мдюсохоф│уид│бнляюсюунс┐│▐│┐│юое│бнобюудоюухоф┐│▐│┐Що┐ ╚╚ясхоу│┐ю│лдррюфд│┐│ы│∙█│┐Що┐ ╚╚трд│жюсохофр ╚трд│русхбу ╚│╚ль│┘р ╚бинля┴┘р│°│²РУЕХО÷┬ ╚ясхоу│┘р█│┐Що┐ 

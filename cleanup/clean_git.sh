@@ -1,1 +1,1 @@
-git branch | grep -v master | xargs -L 1 git branch -D
+фху│цсюоби│щ│фсдя│▄в│люрудс│щ│ыюсфр│▄М│░│фху│цсюоби│▄Е╚A═

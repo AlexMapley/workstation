@@ -1,5 +1,1 @@
-## Kill all containers
-docker ps | awk '{print $1}' | xargs -L -1 docker rm -f
-
-## Prune images and reset OS specs
-docker system prune -af
+┌┌│Йхмм│юмм│бноуюходср╚енбйдс│яр│щ│южй│├зясхоу│┘░э├│щ│ыюсфр│▄М│▄░│енбйдс│сл│▄г╚╚┌┌│Ястод│хлюфдр│юое│сдрду│НР│рядбр╚енбйдс│рьрудл│ястод│▄юг

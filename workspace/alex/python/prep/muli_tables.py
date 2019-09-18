@@ -1,6 +1,1 @@
-for x in range (1,13):
-    line = ""
-    for y in range (1,13):
-        line += str(x*y) + "    "
-        if y == 12:
-            print(line+"\n")
+俏觼賮认佊老颇亯悕悞垱珌亖佂认膩渷儍珌亖伹斡佖伻蟻永掀膩墣崘拡洬亖亖亖亖腿夏亰渷艺訅賸貓亰亙亖亖儷亖亖亖亖惹佖仠渷悡洬亖亖亖亖亖亖延认諌腿夏妰儓

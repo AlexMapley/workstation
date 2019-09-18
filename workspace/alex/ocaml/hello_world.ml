@@ -1,1 +1,1 @@
-print_string "Hello world!\n";;
+延认政艺尤掀亙槟屯蝸治油艀儦毇

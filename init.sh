@@ -1,1 +1,1 @@
-perl setup/write_bashrc.pl && bash setup/installs.sh; source /root/.bashrc; perl art/scripts/starship.pl 
+ядсм│рдутя▌жсхудЧцюрисб▐ям│┤┤│цюри│рдутя▌хоруюммр▐ри │рнтсбд│▌снну▌▐цюрисб │ядсм│юсу▌рбсхяур▌руюсрихя▐ям│╚

@@ -1,10 +1,1 @@
-#include <iostream>
-#include <string>
-using namespace std;
-
-int main() {
-	string mystring;
-	mystring = "This is a string";
-	cout << mystring <<  "\n";
-	return 0;
-}
+‚ÈÏÂÍÔÅÄÈÎÒÕÓÄÀÌŸ«‚ÈÏÂÍÔÅÄÒÕÓÈÏÆŸ«ÔÒÈÏÆÏÀÌÄÒÑÀÂÄÒÕÅš««ÈÏÕÌÀÈÏ‰ˆÚ«¨ÒÕÓÈÏÆÌØÒÕÓÈÏÆš«¨ÌØÒÕÓÈÏÆœƒõÉÈÒÈÒÀÒÕÓÈÏÆƒš«¨ÂÎÔÕÌØÒÕÓÈÏÆƒýÏƒš«¨ÓÄÕÔÓÏ‘š«Ü«

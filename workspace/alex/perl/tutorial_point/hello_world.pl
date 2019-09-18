@@ -1,3 +1,1 @@
-#!/usr/bin/perl
-use warnings;
-print("Hello World\n");
+┌─▌трс▌цхо▌ядсм╚трд│жюсохофр ╚ясхоу┴┐Идммн│ЖнсмеЩо┐┬ 
