@@ -33,20 +33,14 @@ void cryptFile(char *filename) {
     xorString(contents);
     printf("\n%s\n", contents);
 
-    // FILE *fp;
-    // fp = fopen(filename, "a+"); // read mode
+    FILE *f_dst = fopen(filename, "wb");
 
-    // char ch;
-    // if (fp == NULL)
-    // {
-    //     perror("Error while opening the file.\n");
-    // }
-    // while((ch = fgetc(fp)) != EOF)
-    //     printf("%c", ch);
-    
-    // printf("\n\n");
+    // Write Buffer
+    fwrite(contents, 1, sizeof(contents), f_dst);
 
-    // fclose(fp);
+    // Close File
+    fclose(f_dst);
+    f_dst = NULL;
 }
 
 
