@@ -16,7 +16,7 @@ typedef struct _list {
 } *list;
 
 
-list newlist (void) {
+list newList (void) {
 	list l = malloc (sizeof (*l));
 	assert (l != NULL);
 
@@ -36,5 +36,16 @@ link newNode (Item i) {
 }
 
 int main (int argc, char *argv[]) {
+	list head = newList();
+
+	link node = newNode(42);
+
+	head->first = node;
+
+	printf("HEAD @ %p | First: %p\n", head, head->first);
+	printf("NODE @ %p | Item: %d | Next: %p]\n", node, node->item, node->next);
+	free(node);
+	free(head);
+
 	return 0;
 }
