@@ -8,3 +8,4 @@ print $fd("alias c=\"clear\"\n");
 print $fd("alias src=\"cd /src\"\n");
 print $fd("alias alex=\"cd /src/workspace/alex\"\n");
 print $fd("alias python=\"python3\"\n");
+print $fd("alias py=\"python\"\n");
