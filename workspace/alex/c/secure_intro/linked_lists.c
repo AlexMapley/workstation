@@ -15,7 +15,26 @@ typedef struct _list {
 	link first;
 } *list;
 
-int main (int argc, char *argv[]) {
 
-	return EXIT_SUCCESS;
+list newlist (void) {
+	list l = malloc (sizeof (*l));
+	assert (l != NULL);
+
+	l->first = NULL;
+
+	return l;
+}
+
+link newNode (Item i) {
+	link n = malloc (sizeof (*n));
+	assert (n != NULL);
+
+	n->item = i;
+	n->next = NULL;
+
+	return n;
+}
+
+int main (int argc, char *argv[]) {
+	return 0;
 }
