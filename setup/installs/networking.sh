@@ -1,1 +1,1 @@
-apt-get install ipconfig
+apt-get install net-tools
