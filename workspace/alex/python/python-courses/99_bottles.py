@@ -10,5 +10,12 @@ def child(pipeout):
     while True:
         if bottles > 0:
             values = (bottles, bob, otw, bottles, bob, take1, bottles -1, bob, otw)
-            verse = 
+            verse = "%2d %s,\n%d %s.\n%s,\,%2d %s %s." % values
+            os.write(pipeout, verse)
+            bottles -= 1
+        else:
+            bottles = 99
+            values = (bob, otw, bob, store, bottles, bob, otw)
+            verse = "No more %s %s,\nno more %s.\n%s,\n%2d %s %s." % values
+            os.write(pipeout,verse)
 
