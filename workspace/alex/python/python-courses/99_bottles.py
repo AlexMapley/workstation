@@ -19,3 +19,19 @@ def child(pipeout):
             verse = "No more %s %s,\nno more %s.\n%s,\n%2d %s %s." % values
             os.write(pipeout,verse)
 
+def parent():
+    pipein, pipeout = os.pipe()
+    if os.fork() == 0:
+        child(pipeout)
+    else:
+        counter = 1
+        while True:
+            if counter % 100:
+                verse = os.read(pipein, 117)
+            else:
+                verse = os.read(pipein, 128)
+            print ('verse %d\n%s\n') %s (counter, verse)
+            counter +=1
+
+parent()
+
