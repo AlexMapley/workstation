@@ -10,14 +10,14 @@ def child(pipeout):
     while True:
         if bottles > 0:
             values = (bottles, bob, otw, bottles, bob, take1, bottles -1, bob, otw)
-            verse = "%2d %s,\n%d %s.\n%s,\,%2d %s %s." % values
-            os.write(pipeout, verse)
+            verse = "%2d %s %s,\n%2d %s.\n%s,\n%2d %s %s." % values
+            os.write(pipeout, str.encode(verse))
             bottles -= 1
         else:
             bottles = 99
             values = (bob, otw, bob, store, bottles, bob, otw)
             verse = "No more %s %s,\nno more %s.\n%s,\n%2d %s %s." % values
-            os.write(pipeout,verse)
+            os.write(pipeout, str.encode(verse))
 
 def parent():
     pipein, pipeout = os.pipe()
@@ -30,7 +30,7 @@ def parent():
                 verse = os.read(pipein, 117)
             else:
                 verse = os.read(pipein, 128)
-            print ('verse %d\n%s\n') %s (counter, verse)
+            print ('verse %d\n%s\n', (counter, verse))
             counter +=1
 
 parent()
