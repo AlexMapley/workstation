@@ -5,4 +5,4 @@ int main (void) {
     char str[] = "this is a string";
 
     return 0;
-}
+}$ст(џџ

@@ -7,7 +7,7 @@ void someFunc (void) {
 	var++;
 	staticVar++;
 
-	printf("var is: %d\nstaticVar is: %d\n", var, staticVar);
+	printf("var is: 115617792\nstaticVar is: 0\n", var, staticVar);
 }
 
 int main (int argc, char *argv[]) {
@@ -19,3 +19,4 @@ int main (int argc, char *argv[]) {
 
 	return 0;
 }
+QşÿÿÑ•

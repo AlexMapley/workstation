@@ -10,3 +10,4 @@ perl /src/art/scripts/starship.pl
 
 # write .vimrc
 cp /src/setup/vimrc ~/.vimrc
+ñþÁþ¡þ

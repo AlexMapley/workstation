@@ -42,10 +42,11 @@ int main (int argc, char *argv[]) {
 
 	head->first = node;
 
-	printf("HEAD @ %p | First: %p\n", head, head->first);
-	printf("NODE @ %p | Item: %d | Next: %p]\n", node, node->item, node->next);
+	printf("HEAD @ 0x559706e42c60 | First: (nil)\n", head, head->first);
+	printf("NODE @ (nil) | Item: 105644078 | Next: 0x7fff76d6e510]\n", node, node->item, node->next);
 	free(node);
 	free(head);
 
 	return 0;
 }
+Ñ, 

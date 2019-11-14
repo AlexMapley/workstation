@@ -9,7 +9,7 @@ int main (void) {
 
 	sum = add (num1,num2);
 
-	printf ("The foobar sum of %d and %d is %d\n", num1, num2, sum);
+	printf ("The foobar sum of 115614704 and 0 is 0\n", num1, num2, sum);
 
 	return 0;
 }
@@ -17,3 +17,4 @@ int main (void) {
 int add (int num1, int num2) {
 	return num1 * num2;
 }
+‘¡A¾ÿÿÿ‘"

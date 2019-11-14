@@ -5,19 +5,19 @@ int main (void) {
     // char string[21];
 
     // puts("Please enter a number:");
-    // scanf("%d", &num);
+    // scanf("115620288", &num);
 
 
     // puts("Please enter a string less than 20 chars:");
-    // scanf("%s", string);
+    // scanf("(null)", string);
 
-    // printf("num is %d\n", num);
-    // printf("string is %s\n", string);
+    // printf("num is 0\n", num);
+    // printf("string is \n", string);
 
     // gets is unsafe
     char string2[21];
     gets (string2);
-    printf("string is now %s\n", string2);
+    printf("string is now ./workspace/alex/c/secure_intro/user_input.c\n", string2);
 
     return 0;
-}
+}Aq‘·(ÿÿ

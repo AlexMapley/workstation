@@ -1,24 +1,1 @@
-class MyClass:
-  x = 5
-  
-p1 = MyClass()
-print(p1.x)
-
-class Person:
-  def __init__(mysillyobject, name, age):
-    mysillyobject.name = name
-    mysillyobject.age = age
-
-  def myfunc(self):
-    print("Hello my name is " + self.name)
-
-  def myfuncfoo(abc):
-    print("Hello my name is " + abc.name)
-
-p1 = Person("John", 36)
-
-print(p1.name)
-print(p1.age)
-
-p1.myfunc()
-p1.myfuncfoo()
+бмюрр│ЛьБмюрр⌡╚││ы│°│■╚││╚я░│°│ЛьБмюрр┴┬╚ясхоу┴я░▐ы┬╚╚бмюрр│Ядсрно⌡╚││едг│ЧЧхохуЧЧ┴льрхммьнцкдбу█│оюлд█│юфд┬⌡╚││││льрхммьнцкдбу▐оюлд│°│оюлд╚││││льрхммьнцкдбу▐юфд│°│юфд╚╚││едг│льгтоб┴рдмг┬⌡╚││││ясхоу┴┐Идммн│ль│оюлд│хр│┐│┼│рдмг▐оюлд┬╚╚││едг│льгтобгнн┴юцб┬⌡╚││││ясхоу┴┐Идммн│ль│оюлд│хр│┐│┼│юцб▐оюлд┬╚╚я░│°│Ядсрно┴┐Книо┐█│▓≈┬╚╚ясхоу┴я░▐оюлд┬╚ясхоу┴я░▐юфд┬╚╚я░▐льгтоб┴┬╚я░▐льгтобгнн┴┬│pЪЪЪЪЪЪЪЯx /)║з5ЪЪЪЪ

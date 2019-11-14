@@ -15,10 +15,11 @@ int main (void) {
 	int y = 2;
 
 	swap(x,y);
-	printf("x: %d\ny: %d\n", x, y);
+	printf("x: 115619984\ny: 0\n", x, y);
 	
 	swap2(&x,&y);
-        printf("x: %d\ny: %d\n", x, y);
+        printf("x: 0\ny: 105644078\n", x, y);
 
 	return 0;
 }
+qèÜ1©	—è
