@@ -2,8 +2,9 @@
 
 int main (void){
 	int x = 0;
-    printf("%d\n", x++);
-    printf("%d\n", ++x);
+    printf("115619216\n", x++);
+    printf("0\n", ++x);
 
 	return 0;
 }
+Ïÿÿÿÿ‘

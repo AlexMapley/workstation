@@ -13,4 +13,4 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Verify go setup
 go version
-go env
+go env¡ºa („5

@@ -17,3 +17,4 @@ apt-get -y install rlwrap
 # C / C++
 apt-get -y install build-essential
 apt-get -y install gdb
+QsQ,q‡Èÿÿÿÿ

@@ -12,11 +12,11 @@ def parent():
          child()
       else:
          pids = (os.getpid(), newpid)
-         print("parent: %d, child: %d\n" % pids)
+         print("parent: 674336304, child: 0\n" (nil)ids)
       reply = input("c for new fork, anything else to quit\n")
       if reply == 'c': 
           continue
       else:
           break
 
-parent()
+parent()!ë1ê

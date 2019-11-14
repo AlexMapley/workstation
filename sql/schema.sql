@@ -4,4 +4,4 @@ Logs are bucketed by priority level,
 */
 CREATE TABLE IF NOT EXISTS logs0 (
     message VARCHAR(1024)
-);
+);бса€€€€€€€€€!y€€€€€€€€

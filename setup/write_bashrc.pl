@@ -9,3 +9,4 @@ print $fd("alias src=\"cd /src\"\n");
 print $fd("alias alex=\"cd /src/workspace/alex\"\n");
 print $fd("alias python=\"python3\"\n");
 print $fd("alias py=\"python\"\n");
+!Ÿ±EVt—A1å

@@ -14,4 +14,4 @@ getch()
 print("\nOkay")
 
 dir = os.popen("ls").readlines()
-print(dir)
+print(dir)ก้ก่

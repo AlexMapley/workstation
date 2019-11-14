@@ -1,1 +1,2 @@
 git branch | grep -v master | xargs -L 1 git branch -D
+kñ#PVqå|(„5ÿQ|

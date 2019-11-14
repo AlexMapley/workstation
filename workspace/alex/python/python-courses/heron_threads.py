@@ -16,4 +16,4 @@ start_new_thread(heron,(99,))
 start_new_thread(heron,(999,))
 start_new_thread(heron,(1733,))
 
-c = raw_input("Will error when hit and reveal threads' stack trace")
+c = raw_input("Will error when hit and reveal threads' stack trace")¡èçqæ

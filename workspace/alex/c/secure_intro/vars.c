@@ -3,11 +3,8 @@
 int main(void) {
 	int num;
 	num=42;
-	printf("%d\n", num);
+	printf("115615392\n", num);
 
 	char c = 'z';
 
-	printf("%c\n",c);
-
-	return 0;
-}
+	printf("žÁ A×„µë
