@@ -1,4 +1,6 @@
 # Workstation
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+
 Workstation is a dockerized ubuntu environment, meant for ease of development. Good place for tutorials and learning new skills.
 
 ![Container Bootup](https://github.com/AlexMapley/workstation/blob/master/art/bootup.png)
