@@ -6,6 +6,12 @@
 #include <dirent.h>
 #include <stdbool.h>
 
+/* Caution
+
+Though crypt.c should be reversible,
+the encyrptyion/decryption process does permanently corrupt data
+
+*/
 #define XOR_BYTE 0xA1
 
 void xorString (char *s) {
