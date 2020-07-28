@@ -23,14 +23,15 @@ bash init.sh
 This should take a few minutes, and may require some interactivity (specifically for setting up python). Currently the best way to pick/choose language dependencies is to manually comment in/out that `init.sh` file, working on that in the future. 
 
 ## Languages Supported
-- Mysql
 - Bash
-- Perl
-- Python
 - C
 - C++
+- Golang
 - Haskell
+- Mysql
 - OCaml
+- Perl
+- Python
 
 ## Plugins
 - Vim
