@@ -10,8 +10,8 @@ docker ps
 docker-compose up -d
 containerID=$(docker ps | grep ubuntu | awk '{print $1}')
 
-# reload our .bashrc
-docker exec $containerID bash -c  "source ~/.bashrc"
+# Reload our .bashrc for every new session
+docker exec $containerID bash -c  "rm /root/.bashrc; perl src/setup/write_bashrc.pl; source /root/.bashrc"
 
 
 # Display ascii art
