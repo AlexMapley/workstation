@@ -10,7 +10,14 @@ docker ps
 docker-compose up -d
 containerID=$(docker ps | grep ubuntu | awk '{print $1}')
 
+# reload our .bashrc
+docker exec $containerID bash -c  "source ~/.bashrc"
+
+
+# Display ascii art
 docker exec -it $containerID bash -c "tput setaf $(( RANDOM % 7 + 1)); cd /src/art/scripts/; bash display_random.sh; cd /src/; tput sgr0; echo"
+
+# Open terminal
 docker exec -it $containerID /bin/bash
 
 # Example output
