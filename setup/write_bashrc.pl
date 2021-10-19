@@ -1,3 +1,6 @@
+# I think it's hilarious this is written in perl,
+# and I won't change it.
+# This will create out ~/.bashrc file
 use strict;
 use warnings;
 
@@ -14,7 +17,11 @@ print $fd("alias src=\"cd /src\"\n");
 print $fd("alias python=\"python3\"\n");
 print $fd("alias py=\"python\"\n");
 
-print $fd("\n\n# Funcs\n");
-print $fd("parse_git_branch() {\n\tgit branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'\n}", "\n");
-# print $fd('export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "', "\n");
-print $fd('export PS1="\u@\h \[\033[32m\]\w\[\033[33m\] $(parse_git_branch)\[\033[00m\] $ "', "\n");
+# Writes our bash ps1
+print $fd("\n\n# PS1\n");
+print $fd('if [ "`id -u`" -eq 0 ]; then
+    PS1="\[\033[m\]|\[\033[1;35m\]\t\[\033[m\]|\[\e[1;31m\]\u\[\e[1;36m\]\[\033[m\]@\[\e[1;36m\]\h\[\033[m\]:\[\e[0m\]\[\e[1;32m\][\W]> \[\e[0m\]"
+else
+    PS1="\[\033[m\]|\[\033[1;35m\]\t\[\033[m\]|\[\e[1m\]\u\[\e[1;36m\]\[\033[m\]@\[\e[1;36m\]\h\[\033[m\]:\[\e[0m\]\[\e[1;32m\][\W]> \[\e[0m\]"
+fi
+');
