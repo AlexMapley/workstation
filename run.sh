@@ -15,7 +15,7 @@ docker exec $containerID bash -c  "rm /root/.bashrc; perl src/setup/write_bashrc
 
 
 # Display ascii art
-docker exec -it $containerID bash -c "tput setaf $(( RANDOM % 7 + 1)); cd /src/art/scripts/; bash display_random.sh; cd /src/; tput sgr0; echo"
+docker exec -it $containerID bash -c "tput setaf $(( RANDOM % 7 + 1)); cd /src/art/scripts/; bash display_random.sh; tput sgr0; echo"
 
 # Open terminal
 docker exec -it $containerID /bin/bash
