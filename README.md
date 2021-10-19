@@ -3,7 +3,7 @@
 
 Workstation is a dockerized ubuntu environment, meant for ease of development. Good place for tutorials and learning new skills.
 
-![Container Bootup](https://github.com/AlexMapley/workstation/blob/master/art/bootup.png)
+![Container Bootup](https://github.com/AlexMapley/workstation/blob/main/art/bootup.png)
 
 ## Getting Started
 Assuming you have both `docker` and `docker-compose` up and running on your local machine, you should be good to go with spinning up a new Workstation instance. Just run:
